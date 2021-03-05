@@ -1,19 +1,16 @@
 <template>
   <div class="home">
         <Login/>
-        <foooter/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-//import foooter from '@/components/footer.vue'
 import Login from '@/components/login.vue'
 export default {
   name: 'Home',
   components: {
     Login
-    //foooter
   }
 }
 </script>

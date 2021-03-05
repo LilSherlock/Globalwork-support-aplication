@@ -1,0 +1,25 @@
+{
+  "name": "dios",
+  "version": "1.0.0",
+  "description": "xdd",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "xdd",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "eslint": "^7.21.0",
+    "express": "^4.17.1",
+    "mariadb": "^2.5.3",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.5.0",
+    "sqlite3": "^5.0.2"
+  }
+}

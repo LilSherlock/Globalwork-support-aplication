@@ -1,0 +1,61 @@
+xd
+list
+help
+\?
+\h
+inet_client_addr
+help
+pg_stat_activity.client_addr
+SELECT inet_server_addr();
+SELECT inet_server_addr();
+SHOW inet_server_addr();
+select inet_client_addr();
+SELECT inet_server_addr();
+CREATE DATABASE HOLA;
+SHOW DATABASES;
+show all databases
+\l
+\l
+show databases;
+show database;
+show *;
+databases;
+show databases
+\l
+\c gwsupport
+\dy
+\dt
+\x user
+SELECT * FROM "user";
+\d user
+\dt
+\d support
+\dt
+ALTER TABLE support RENAME TO ticket;
+\dt
+/d
+/dt
+/all
+/a
+help
+\?
+\l
+\du
+CREATE USER globalwork WITH PASSWORD 'hola';
+\du
+ALTER USER globalwork WITH SUPERUSER;
+\du
+\l
+\l
+\dt
+\dt ticket
+\t
+\t user
+\dt user
+\i
+\s
+\s
+\l
+SELECT users FROM gwsupport
+\d
+\s gwsupport

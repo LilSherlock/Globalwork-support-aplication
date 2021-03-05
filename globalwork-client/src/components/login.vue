@@ -5,24 +5,38 @@
         <img src="../assets/logobal.svg" alt="">
       </div>
       <div class="login-content">
-        <input type="text" placeholder="Ingresar email" name="email">
+        <input type="email" placeholder="email" v-model="email" name="email">
       </div>
       <div class="login-content">
-        <input type="password" placeholder="Ingresar password" name="password">
+        <input type="password" v-model="password" placeholder="password" name="password">
       </div>
       <div class="button-login">
-        <button class="button" type="submit">login</button>
+        <button @click="register" class="button" type="submit">login</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import authService from '@/service/authenticationService'
 export default {
-  name: 'login',
-  props: {
-    msg: String
-  }
+  data () {
+    return {
+      email: '',
+      password: ''
+    }
+  },
+  methods: {
+    async register() {
+      const response = await authService.register({
+        email: this.email,
+        password: this.password
+      })
+      console.log(response)
+    }
+  },
+  name: 'login'
+
 }
 </script>
 
