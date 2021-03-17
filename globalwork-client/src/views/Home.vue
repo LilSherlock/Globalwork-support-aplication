@@ -1,24 +1,30 @@
 <template>
-  <div class="about">
-    <bar/>
-  </div>
+    <div class="Home">
+        <Header/>
+        <div class="content">
+            <forms/>
+            <register/>
+        </div>
+    </div>
 </template>
 
-<script type="text/javascript">
-import bar from '@/components/navbar.vue'
+<script>
+import Header from '@/components/header.vue'
+import register from '@/components/register.vue'
+import forms from '@/components/form.vue'
 export default {
-  name: 'home',
-  components: {
-    bar
-  }
+    name: 'home',
+    components: {
+        Header,
+        register,
+        forms
+    }
 }
 </script>
 
-<style media="screen">
-* {
-  box-sizing: border-box;
-}
-html {
-  height: 100%;
+<style>
+.content {
+    display: flex;
+    justify-content: space-evenly;
 }
 </style>

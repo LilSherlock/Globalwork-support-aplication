@@ -1,108 +1,125 @@
 <template>
-  <div class="Login">
-    <div class="login-container">
-      <div class="message-content">
-        <img src="../assets/logobal.svg" alt="">
-      </div>
-      <div class="login-content">
-        <input type="email" placeholder="email" v-model="email" name="email">
-      </div>
-      <div class="login-content">
-        <input type="password" v-model="password" placeholder="password" name="password">
-      </div>
-      <div class="button-login">
-        <button @click="register" class="button" type="submit">login</button>
-      </div>
+    <div class="Login">   
+        <div class="message-content">
+            <img src="../assets/logobal.svg" alt="">
+        </div>
+        
+        <div class="login-content">
+            <input type="email" placeholder="email" v-model="email" name="email">
+        </div>
+        
+        <div class="login-content">
+            <input type="password" v-model="password" placeholder="password" name="password">
+        </div>
+        
+        <div class="button-login">
+            <button @click="login" class="button" type="submit">login</button>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
 import authService from '@/service/authenticationService'
 export default {
-  data () {
-    return {
-      email: '',
-      password: ''
-    }
-  },
-  methods: {
-    async register() {
-      const response = await authService.register({
-        email: this.email,
-        password: this.password
-      })
-      console.log(response)
-    }
-  },
-  name: 'login'
+    data () {
+        return {
+        email: '',
+        password: ''
+        }
+    },
+    methods: {
+        async login() {
+        const response = await authService.login({
+            email: this.email,
+            password: this.password
+            })
+        console.log(response)
+        }
+    },
+    name: 'login'
 
 }
 </script>
 
 
 <style>
-
-.login-container {
-  margin: auto;
-  width: 50%;
-  border-radius: 25px;
+html {height: 100%;}
+input {
+    outline:none;
+}
+.Login {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 50px 50px 5px;
+    width: 650px;
+    height: 560px;
+    padding-top: 120px;
+    background-color: rgba(243, 233, 233, 0.767);
 }
 .message-content {
-  padding-top: 2%;
-  font-size: 25px;
-  margin-bottom: 7%;
-  transform: scale(2);
+    margin-bottom: 70px;
 }
-.login-content {
-  padding-top: 5%;
-  position: relative;
+.message-content img {
+    width: 400px;
 }
-.button-login {
-  padding-top: 5%;
-  padding-bottom: 15%;
-  position: relative;
+.login-content input{
+    border: none;
+    height: 50px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    width: 500px;
+    margin-bottom: 30px;
 }
-
-input {
-  width: 48%;
-  padding: 30px;
-  background-color: #eff6e0;
-  border: 1px solid black;
-  border-radius: 25px;
-  outline: none;
-  box-shadow:none !important;
-  border:2px solid #353535 !important;
-  font-family: 'Rubik', sans-serif;
+.login-content input[type="email"]{
+    border: none;
+    height: 50px;
+    font-size: 15px;
+    padding-left: 20px;
+    font-family: 'Rubik', sans-serif;
+    width: 400px;
+    margin-bottom: 30px;
 }
-input:focus {
-  width: 50%;
-  padding: 30px 20px;
-  background-color: #f7fff7;
-  border: 1px solid black;
-  border-radius: 25px;
-  outline: none;
-  box-shadow:none !important;
-  border:2px solid #353535 !important;
-  font-family: 'Rubik', sans-serif;
-  transition: 0.8s;
+.login-content input[type="email"]:focus{
+    border: none;
+    height: 50px;
+    font-size: 15px;
+    padding-left: 20px;
+    font-family: 'Rubik', sans-serif;
+    width: 500px;
+    transition: 0.8s;
+    margin-bottom: 30px;
 }
-button {
-  width: 20%;
-  padding: 15px;
-  background-color: #fef9ef;
-  border:2px solid #353535 !important;
-  border-radius: 25px;
-  outline: none;
-  font-family: 'Rubik', sans-serif;
-  box-shadow: 0 3px #999;
-  text-align: center;
+.login-content input[type="password"]{
+    border: none;
+    height: 50px;
+    font-size: 15px;
+    padding-left: 20px;
+    font-family: 'Rubik', sans-serif;
+    width: 400px;
+    margin-bottom: 30px;
+    border: none;
 }
-
-button:active {
-  background-color: #eff6e0;
-  box-shadow: 0 3px #666;
-  transform: translateY(2px);
+.login-content input[type="password"]:focus{
+    border: none;
+    height: 50px;
+    font-size: 15px;
+    padding-left: 20px;
+    font-family: 'Rubik', sans-serif;
+    width: 500px;
+    margin-bottom: 30px;
+    transition: 0.8s;
+    border: none;
 }
-
+.button {
+    height: 60px;
+    width: 120px;
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    outline:none;
+}
+.button:active {
+    transform: translateY(2px);
+    font-family: 'Rubik', sans-serif;
+}
 </style>

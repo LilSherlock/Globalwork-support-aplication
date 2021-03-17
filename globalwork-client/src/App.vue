@@ -26,14 +26,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 12%;
+  margin-top: 8%;
 }
 body {
-	background: linear-gradient(-45deg, #227c9d, #17c3b2, #ffcb77);
+	background: linear-gradient(-45deg, #227c9d, #388d84, #ffcb77);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 50s ease infinite;
 }
-
+html {
+    height: 100%;
+}
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;

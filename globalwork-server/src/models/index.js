@@ -5,7 +5,9 @@ const config = require('../config/config');
 
 const db = {}
 console.log(`database: ${config.db.database}`);
-const sequelize = new Sequelize('postgres://postgres@35.196.26.40:5432/gwsupport')
+const sequelize = new Sequelize('postgres://postgres@35.196.26.40:5432/gwsupport', {
+
+})
 
 fs
     .readdirSync(__dirname)

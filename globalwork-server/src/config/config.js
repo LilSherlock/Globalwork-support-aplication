@@ -9,5 +9,8 @@ module.exports = {
         storage: './gwsupport.sqlite'
         }
     },
-    port: 8081
+    port: 8081,
+    authentication: {
+        jwtSecret: process.env.JWT_SECRET || 'hola'
+    }
 }
